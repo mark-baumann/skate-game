@@ -27,7 +27,16 @@
     100%{top: 140px;  background-image: url(./images/pic5.jpg);}
 }
 
+.animateKickflip{
+    animation: kickflip 1s linear;
+}
 
+@keyframes kickflip{
+    0%{top: 150px;   background-image: url(./images/pic1.jpg);}
+    20%{top: 130px;  background-image: url(./images/kickflip1.png);}
+    40%{top: 110px;  background-image: url(./images/kickflip2.png); }
+    100%{top: 140px;  background-image: url(./images/kickflip1.png); }
+}
 
 #block{
     background-image: url(./images/hindernis.png);
@@ -37,7 +46,7 @@
     position: relative;
     top: 270px;
     left: 500px;
-    animation: block 2s linear;
+    animation: block 1s linear;
 }
 @keyframes block{
     0%{left: 500px}

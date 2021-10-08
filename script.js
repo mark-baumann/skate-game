@@ -1,6 +1,7 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 var counter=0;
+document.onkeydown = kickflip;
 function jump(){
     if(character.classList == "animate"){return}
     character.classList.add("animate");
@@ -21,3 +22,25 @@ var checkDead = setInterval(function() {
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
     }
 }, 10);
+
+
+
+
+
+function kickflip(e) {
+
+    e = e || window.event;
+
+    //kickflip
+    if (e.keyCode == '75') {
+        if(character.classList == "animateKickflip"){return}
+        character.classList.add("animateKickflip");
+        setTimeout(function(){
+            character.classList.remove("animateKickflip");
+        },800);
+    }
+
+}
+
+
+
